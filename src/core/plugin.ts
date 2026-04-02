@@ -83,8 +83,8 @@ export const executeDrawingGame = async (
   const color = args.color ?? defaultColor;
   const pattern = args.pattern ?? defaultPattern;
 
-  let message = "";
-  let instructions = "";
+  let message: string;
+  let instructions: string;
 
   switch (action) {
     case "start": {
