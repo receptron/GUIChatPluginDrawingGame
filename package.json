@@ -1,6 +1,6 @@
 {
   "name": "@gui-chat-plugin/drawing-game",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Drawing game plugin - draw with primitives and let AI guess",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -42,20 +42,21 @@
     }
   },
   "devDependencies": {
-    "@tailwindcss/vite": "^4.1.18",
-    "@typescript-eslint/eslint-plugin": "^8.53.0",
-    "@typescript-eslint/parser": "^8.53.0",
-    "@vitejs/plugin-vue": "^6.0.3",
-    "eslint": "^9.39.2",
-    "eslint-plugin-vue": "^10.6.2",
-    "globals": "^17.0.0",
+    "@eslint/js": "^10.0.1",
+    "@tailwindcss/vite": "^4.2.2",
+    "@typescript-eslint/eslint-plugin": "^8.58.0",
+    "@typescript-eslint/parser": "^8.58.0",
+    "@vitejs/plugin-vue": "^6.0.5",
+    "eslint": "^10.1.0",
+    "eslint-plugin-vue": "^10.8.0",
+    "globals": "^17.4.0",
     "openai": "^6.16.0",
-    "tailwindcss": "^4.1.18",
+    "tailwindcss": "^4.2.2",
     "typescript": "~5.9.3",
-    "vite": "^7.3.1",
-    "vue": "^3.5.26",
-    "vue-eslint-parser": "^10.2.0",
-    "vue-tsc": "^3.2.2"
+    "vite": "^8.0.3",
+    "vue": "^3.5.31",
+    "vue-eslint-parser": "^10.4.0",
+    "vue-tsc": "^3.2.6"
   },
   "keywords": [
     "guichat",
@@ -67,6 +68,6 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "gui-chat-protocol": "^0.0.3"
+    "gui-chat-protocol": "^0.0.4"
   }
 }
