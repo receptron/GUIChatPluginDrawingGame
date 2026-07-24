@@ -1,6 +1,6 @@
 {
   "name": "@gui-chat-plugin/drawing-game",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Drawing game plugin - draw with primitives and let AI guess",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -68,6 +68,6 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "gui-chat-protocol": "^1.1.0"
+    "gui-chat-protocol": "^1.2.0"
   }
 }
