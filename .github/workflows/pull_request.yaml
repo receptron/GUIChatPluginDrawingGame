@@ -49,6 +49,7 @@ jobs:
     - run: yarn run typecheck
     - run: yarn run lint
     - run: yarn run build
+    - run: yarn run test
     # Sanity-check `npm pack` only once (Linux + Node 24) to avoid
     # 6-way artifact-name collisions; lint/build coverage is what
     # the cross-OS matrix is actually for.

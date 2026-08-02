@@ -67,14 +67,17 @@ const describeShape = (shape: Shape): string => {
 // Execute Function
 // ============================================================================
 
+// context is nullable on purpose: hosts that run the plugin without client-side
+// state (MulmoClaude's server bridge) pass an empty or missing context, and
+// reading through it unguarded threw a TypeError instead of returning a result.
 export const executeDrawingGame = async (
-  context: ToolContext,
+  context: ToolContext | null | undefined,
   args: DrawingGameArgs,
 ): Promise<ToolResult<DrawingGameData, DrawingGameJsonData>> => {
   const { action } = args;
 
   // Get current state from context or initialize
-  const currentData = context.currentResult?.data as DrawingGameData | undefined;
+  const currentData = context?.currentResult?.data as DrawingGameData | undefined;
   let shapes: Shape[] = currentData?.shapes ?? [];
   let defaultColor: string = currentData?.defaultColor ?? "black";
   let defaultPattern: PatternType = currentData?.defaultPattern ?? "solid";
