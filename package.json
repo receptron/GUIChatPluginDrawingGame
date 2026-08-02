@@ -29,6 +29,7 @@
   ],
   "scripts": {
     "dev": "vite",
+    "prepare": "yarn build",
     "build": "vite build && vue-tsc -p tsconfig.build.json --emitDeclarationOnly",
     "typecheck": "vue-tsc --noEmit",
     "lint": "eslint src demo",
