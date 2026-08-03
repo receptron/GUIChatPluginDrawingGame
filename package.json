@@ -1,6 +1,6 @@
 {
   "name": "@gui-chat-plugin/drawing-game",
-  "version": "1.1.1",
+  "version": "2.0.0",
   "description": "Drawing game plugin - draw with primitives and let AI guess",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -36,7 +36,7 @@
     "test": "tsx --test tests/*.test.ts"
   },
   "peerDependencies": {
-    "gui-chat-protocol": "^1.2.0",
+    "gui-chat-protocol": "^2.0.0",
     "vue": "^3.5.0"
   },
   "peerDependenciesMeta": {
@@ -53,7 +53,7 @@
     "eslint": "^10.8.0",
     "eslint-plugin-vue": "^10.10.0",
     "globals": "^17.8.0",
-    "gui-chat-protocol": "^1.2.0",
+    "gui-chat-protocol": "^2.0.0",
     "openai": "^6.47.0",
     "tailwindcss": "^4.3.3",
     "tsx": "^4.23.4",
