@@ -1,5 +1,7 @@
 # @gui-chat-plugin/drawing-game
 
+[![scoria](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/receptron/GUIChatPluginDrawingGame/badges/scoria.json)](https://github.com/receptron/GUIChatPluginDrawingGame/actions/workflows/scoria.yml)
+
 Drawing game plugin for GUI Chat applications. Draw pictures using only primitive shapes through voice/chat instructions, then let AI guess what you drew!
 
 ## Features
