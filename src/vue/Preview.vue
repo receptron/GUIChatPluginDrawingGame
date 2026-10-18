@@ -2,9 +2,7 @@
   <div class="p-3 bg-amber-50 rounded-md">
     <div v-if="gameData" class="flex flex-col gap-2">
       <!-- Title -->
-      <div class="text-sm font-semibold text-slate-800 text-center">
-        Drawing Game
-      </div>
+      <div class="text-sm font-semibold text-slate-800 text-center">Drawing Game</div>
 
       <!-- Mini Canvas Preview -->
       <div class="bg-white rounded border border-slate-200 overflow-hidden">
@@ -19,14 +17,7 @@
               :stroke="shape.color"
               stroke-width="0.5"
             />
-            <ellipse
-              v-else-if="shape.type === 'ellipse'"
-              :cx="shape.x"
-              :cy="shape.y"
-              :rx="shape.width / 2"
-              :ry="shape.height / 2"
-              :fill="shape.color"
-            />
+            <ellipse v-else-if="shape.type === 'ellipse'" :cx="shape.x" :cy="shape.y" :rx="shape.width / 2" :ry="shape.height / 2" :fill="shape.color" />
             <rect
               v-else-if="shape.type === 'rectangle'"
               :x="shape.x - shape.width / 2"
@@ -35,29 +26,15 @@
               :height="shape.height"
               :fill="shape.color"
             />
-            <polygon
-              v-else-if="shape.type === 'triangle'"
-              :points="getMiniTrianglePoints(shape)"
-              :fill="shape.color"
-            />
-            <line
-              v-else-if="shape.type === 'line'"
-              :x1="shape.x1"
-              :y1="shape.y1"
-              :x2="shape.x2"
-              :y2="shape.y2"
-              :stroke="shape.color"
-              stroke-width="1"
-            />
+            <polygon v-else-if="shape.type === 'triangle'" :points="getMiniTrianglePoints(shape)" :fill="shape.color" />
+            <line v-else-if="shape.type === 'line'" :x1="shape.x1" :y1="shape.y1" :x2="shape.x2" :y2="shape.y2" :stroke="shape.color" stroke-width="1" />
           </template>
         </svg>
       </div>
 
       <!-- Shape Count -->
       <div class="text-center">
-        <span class="inline-block bg-amber-500 text-white text-xs font-bold py-1 px-3 rounded-full">
-          {{ gameData.shapes.length }} shapes
-        </span>
+        <span class="inline-block bg-amber-500 text-white text-xs font-bold py-1 px-3 rounded-full"> {{ gameData.shapes.length }} shapes </span>
       </div>
     </div>
   </div>

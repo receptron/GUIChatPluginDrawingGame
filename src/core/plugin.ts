@@ -40,8 +40,7 @@ const describeShape = (shape: Shape): string => {
 
   switch (shape.type) {
     case "circle": {
-      const sizeDesc =
-        shape.size < 15 ? "small" : shape.size > 35 ? "large" : "medium";
+      const sizeDesc = shape.size < 15 ? "small" : shape.size > 35 ? "large" : "medium";
       return `${sizeDesc}${patternDesc} ${shape.color} circle at ${positionDesc(shape.x, shape.y)}`;
     }
     case "ellipse": {
@@ -53,8 +52,7 @@ const describeShape = (shape: Shape): string => {
       return `${patternDesc} ${shape.color} ${shapeType} at ${positionDesc(shape.x, shape.y)}`;
     }
     case "triangle": {
-      const sizeDesc =
-        shape.size < 15 ? "small" : shape.size > 35 ? "large" : "medium";
+      const sizeDesc = shape.size < 15 ? "small" : shape.size > 35 ? "large" : "medium";
       return `${sizeDesc}${patternDesc} ${shape.color} triangle at ${positionDesc(shape.x, shape.y)}`;
     }
     case "line": {
@@ -116,8 +114,7 @@ export const executeDrawingGame = async (
       };
       shapes = [...shapes, newCircle];
       message = `Drew a ${color} circle at (${x}, ${y}) with size ${size}`;
-      instructions =
-        "Circle added. Ask the user what else they want to add or if they want you to guess.";
+      instructions = "Circle added. Ask the user what else they want to add or if they want you to guess.";
       break;
     }
 
@@ -138,8 +135,7 @@ export const executeDrawingGame = async (
       };
       shapes = [...shapes, newEllipse];
       message = `Drew a ${color} ellipse at (${x}, ${y})`;
-      instructions =
-        "Ellipse added. Ask the user what else they want to add.";
+      instructions = "Ellipse added. Ask the user what else they want to add.";
       break;
     }
 
@@ -160,8 +156,7 @@ export const executeDrawingGame = async (
       };
       shapes = [...shapes, newRect];
       message = `Drew a ${color} rectangle at (${x}, ${y})`;
-      instructions =
-        "Rectangle added. Ask the user what else they want to add.";
+      instructions = "Rectangle added. Ask the user what else they want to add.";
       break;
     }
 
@@ -180,8 +175,7 @@ export const executeDrawingGame = async (
       };
       shapes = [...shapes, newTriangle];
       message = `Drew a ${color} triangle at (${x}, ${y}) with size ${size}`;
-      instructions =
-        "Triangle added. Ask the user what else they want to add.";
+      instructions = "Triangle added. Ask the user what else they want to add.";
       break;
     }
 
@@ -212,8 +206,7 @@ export const executeDrawingGame = async (
       if (args.color) {
         defaultColor = args.color;
         message = `Default fill color changed to ${args.color}`;
-        instructions =
-          "Default color updated. Future shapes will use this color unless specified otherwise.";
+        instructions = "Default color updated. Future shapes will use this color unless specified otherwise.";
       } else {
         message = "No color specified for fill action";
         instructions = "Ask the user what color they want to use.";
@@ -225,12 +218,10 @@ export const executeDrawingGame = async (
       if (args.pattern) {
         defaultPattern = args.pattern;
         message = `Default pattern changed to ${args.pattern}`;
-        instructions =
-          "Default pattern updated. Future shapes will use this pattern unless specified otherwise.";
+        instructions = "Default pattern updated. Future shapes will use this pattern unless specified otherwise.";
       } else {
         message = "No pattern specified";
-        instructions =
-          "Ask the user what pattern they want (solid, hatched, dotted, striped).";
+        instructions = "Ask the user what pattern they want (solid, hatched, dotted, striped).";
       }
       break;
     }
@@ -284,8 +275,7 @@ export const executeDrawingGame = async (
       gamePhase = "guessing";
       const shapeDescriptions = shapes.map(describeShape);
       message = `Guessing phase! The drawing has ${shapes.length} shapes.`;
-      instructions =
-        `Look at the shape descriptions and make your best guess what the user drew. Be creative and fun with your guess! Shape descriptions: ${shapeDescriptions.join("; ")}. After guessing, ask the user if you were correct.`;
+      instructions = `Look at the shape descriptions and make your best guess what the user drew. Be creative and fun with your guess! Shape descriptions: ${shapeDescriptions.join("; ")}. After guessing, ask the user if you were correct.`;
       break;
     }
 
@@ -323,11 +313,7 @@ export const executeDrawingGame = async (
 // Core Plugin
 // ============================================================================
 
-export const pluginCore: ToolPluginCore<
-  DrawingGameData,
-  DrawingGameJsonData,
-  DrawingGameArgs
-> = {
+export const pluginCore: ToolPluginCore<DrawingGameData, DrawingGameJsonData, DrawingGameArgs> = {
   toolDefinition: TOOL_DEFINITION,
   execute: executeDrawingGame,
   generatingMessage: "Drawing...",

@@ -6,9 +6,7 @@
         <h2 class="text-xl font-bold text-slate-800">Drawing Game</h2>
         <div class="flex items-center gap-4 text-sm text-slate-600">
           <span>Shapes: {{ gameData.shapes.length }}</span>
-          <span
-            :class="gameData.gamePhase === 'guessing' ? 'text-amber-600 font-semibold' : ''"
-          >
+          <span :class="gameData.gamePhase === 'guessing' ? 'text-amber-600 font-semibold' : ''">
             {{ gameData.gamePhase === "guessing" ? "Guessing!" : "Drawing" }}
           </span>
         </div>
@@ -16,21 +14,11 @@
 
       <!-- SVG Canvas -->
       <div class="bg-white rounded-lg shadow-lg overflow-hidden border-2 border-slate-300">
-        <svg
-          :viewBox="`0 0 ${CANVAS_SIZE} ${CANVAS_SIZE}`"
-          class="w-full aspect-square"
-          style="background: white;"
-        >
+        <svg :viewBox="`0 0 ${CANVAS_SIZE} ${CANVAS_SIZE}`" class="w-full aspect-square" style="background: white">
           <!-- Pattern Definitions -->
           <defs>
             <!-- Hatched pattern -->
-            <pattern
-              id="pattern-hatched"
-              patternUnits="userSpaceOnUse"
-              width="8"
-              height="8"
-              patternTransform="rotate(45)"
-            >
+            <pattern id="pattern-hatched" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(45)">
               <line x1="0" y1="0" x2="0" y2="8" stroke="currentColor" stroke-width="2" />
             </pattern>
 
@@ -47,26 +35,8 @@
 
           <!-- Grid (optional visual guide) -->
           <g class="opacity-10">
-            <line
-              v-for="i in 9"
-              :key="`v-${i}`"
-              :x1="i * 50"
-              y1="0"
-              :x2="i * 50"
-              :y2="CANVAS_SIZE"
-              stroke="#999"
-              stroke-width="1"
-            />
-            <line
-              v-for="i in 9"
-              :key="`h-${i}`"
-              x1="0"
-              :y1="i * 50"
-              :x2="CANVAS_SIZE"
-              :y2="i * 50"
-              stroke="#999"
-              stroke-width="1"
-            />
+            <line v-for="i in 9" :key="`v-${i}`" :x1="i * 50" y1="0" :x2="i * 50" :y2="CANVAS_SIZE" stroke="#999" stroke-width="1" />
+            <line v-for="i in 9" :key="`h-${i}`" x1="0" :y1="i * 50" :x2="CANVAS_SIZE" :y2="i * 50" stroke="#999" stroke-width="1" />
           </g>
 
           <!-- Shapes -->
@@ -136,15 +106,9 @@
 
       <!-- Status Bar -->
       <div class="mt-4 text-center text-sm text-slate-500">
-        <span v-if="gameData.shapes.length === 0">
-          Say something like "draw a big blue circle in the center"
-        </span>
-        <span v-else-if="gameData.gamePhase === 'drawing'">
-          Keep adding shapes or say "guess!" when done
-        </span>
-        <span v-else>
-          Waiting for the guess...
-        </span>
+        <span v-if="gameData.shapes.length === 0"> Say something like "draw a big blue circle in the center" </span>
+        <span v-else-if="gameData.gamePhase === 'drawing'"> Keep adding shapes or say "guess!" when done </span>
+        <span v-else> Waiting for the guess... </span>
       </div>
     </div>
   </div>

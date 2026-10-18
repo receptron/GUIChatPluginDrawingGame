@@ -58,12 +58,7 @@ export interface LineShape extends BaseShape {
   strokeWidth: number;
 }
 
-export type Shape =
-  | CircleShape
-  | EllipseShape
-  | RectangleShape
-  | TriangleShape
-  | LineShape;
+export type Shape = CircleShape | EllipseShape | RectangleShape | TriangleShape | LineShape;
 
 // ============================================================================
 // Game Data Types
@@ -91,18 +86,7 @@ export interface DrawingGameJsonData {
 // Arguments Types
 // ============================================================================
 
-export type ActionType =
-  | "start"
-  | "circle"
-  | "ellipse"
-  | "rectangle"
-  | "triangle"
-  | "line"
-  | "fill"
-  | "pattern"
-  | "move"
-  | "undo"
-  | "guess";
+export type ActionType = "start" | "circle" | "ellipse" | "rectangle" | "triangle" | "line" | "fill" | "pattern" | "move" | "undo" | "guess";
 
 export interface DrawingGameArgs {
   action: ActionType;
