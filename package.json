@@ -38,7 +38,9 @@
     "lint": "eslint src demo",
     "test": "tsx --test tests/*.test.ts",
     "quality": "scoria",
-    "test:coverage": "c8 yarn run test"
+    "test:coverage": "c8 yarn run test",
+    "format": "prettier --write \"{src,demo,tests}/**/*.{ts,tsx,vue,json,css}\" \"*.{ts,js,json}\"",
+    "format:check": "prettier --check \"{src,demo,tests}/**/*.{ts,tsx,vue,json,css}\" \"*.{ts,js,json}\""
   },
   "peerDependencies": {
     "gui-chat-protocol": "^2.1.0",
@@ -61,6 +63,7 @@
     "globals": "^17.13.0",
     "gui-chat-protocol": "^2.3.0",
     "openai": "^7.38.0",
+    "prettier": "^3.9.10",
     "scoria": "^0.4.1",
     "tailwindcss": "^4.3.3",
     "tsx": "^4.23.15",

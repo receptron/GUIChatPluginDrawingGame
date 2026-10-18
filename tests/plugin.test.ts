@@ -23,14 +23,8 @@ const CONTEXTS: [string, unknown][] = [
 describe("GUIChatPluginDrawingGame - host provides no context", () => {
   CONTEXTS.forEach(([label, context]) => {
     test(`returns a result instead of throwing when context is ${label}`, async () => {
-      const result = await pluginCore.execute(
-        context as never,
-        ARGS as never,
-      );
-      assert.ok(
-        result && typeof result === "object",
-        "execute must resolve to a ToolResult rather than throw",
-      );
+      const result = await pluginCore.execute(context as never, ARGS as never);
+      assert.ok(result && typeof result === "object", "execute must resolve to a ToolResult rather than throw");
     });
   });
 });

@@ -18,19 +18,7 @@ export const TOOL_DEFINITION: ToolDefinition = {
     properties: {
       action: {
         type: "string",
-        enum: [
-          "start",
-          "circle",
-          "ellipse",
-          "rectangle",
-          "triangle",
-          "line",
-          "fill",
-          "pattern",
-          "move",
-          "undo",
-          "guess",
-        ],
+        enum: ["start", "circle", "ellipse", "rectangle", "triangle", "line", "fill", "pattern", "move", "undo", "guess"],
         description:
           "The action to perform. " +
           "start: Clear canvas and start new game. " +
@@ -51,8 +39,7 @@ export const TOOL_DEFINITION: ToolDefinition = {
       },
       size: {
         type: "number",
-        description:
-          "Size for circle/triangle (0-100, where 5=tiny, 15=small, 30=medium, 50=large)",
+        description: "Size for circle/triangle (0-100, where 5=tiny, 15=small, 30=medium, 50=large)",
       },
       width: {
         type: "number",
@@ -89,8 +76,7 @@ export const TOOL_DEFINITION: ToolDefinition = {
       pattern: {
         type: "string",
         enum: ["solid", "hatched", "dotted", "striped"],
-        description:
-          "Fill pattern: solid (normal), hatched (diagonal lines), dotted, striped (horizontal)",
+        description: "Fill pattern: solid (normal), hatched (diagonal lines), dotted, striped (horizontal)",
       },
       dx: {
         type: "number",
