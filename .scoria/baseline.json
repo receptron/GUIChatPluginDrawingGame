@@ -1,0 +1,967 @@
+{
+  "report": {
+    "schemaVersion": 1,
+    "root": ".",
+    "label": "@gui-chat-plugin/drawing-game",
+    "profile": "library",
+    "stacks": [
+      "vue",
+      "ts"
+    ],
+    "complete": true,
+    "size": {
+      "files": 24,
+      "sloc": 2096,
+      "testSloc": 32
+    },
+    "dimensions": [
+      {
+        "dimension": "architecture",
+        "status": "experimental",
+        "score": 83.3283,
+        "coverage": 1,
+        "metrics": [
+          {
+            "metric": "knip.unused_export_ratio",
+            "value": 0.0417,
+            "state": "ok",
+            "scale": {
+              "good": 0,
+              "bad": 0.2
+            },
+            "weight": 0.3,
+            "points": 23.745
+          },
+          {
+            "metric": "knip.unused_file_ratio",
+            "value": 0.125,
+            "state": "ok",
+            "scale": {
+              "good": 0,
+              "bad": 0.3
+            },
+            "weight": 0.25,
+            "points": 14.5833
+          },
+          {
+            "metric": "knip.unused_dependencies",
+            "value": 0,
+            "state": "ok",
+            "scale": {
+              "good": 0,
+              "bad": 10
+            },
+            "weight": 0.2,
+            "points": 20
+          },
+          {
+            "metric": "circular.cycle_count",
+            "value": 0,
+            "state": "ok",
+            "scale": {
+              "good": 0,
+              "bad": 8
+            },
+            "weight": 0.25,
+            "points": 25
+          }
+        ],
+        "confidence": "medium",
+        "confidenceReason": "2 suppressions in scope"
+      },
+      {
+        "dimension": "correctness",
+        "status": "experimental",
+        "score": 85.687,
+        "coverage": 1,
+        "metrics": [
+          {
+            "metric": "oxlint.errors_per_kloc",
+            "value": 0,
+            "state": "ok",
+            "scale": {
+              "good": 0,
+              "bad": 3
+            },
+            "weight": 0.6,
+            "density": true,
+            "points": 60
+          },
+          {
+            "metric": "oxlint.violations_per_kloc",
+            "value": 2.8626,
+            "state": "ok",
+            "scale": {
+              "good": 0,
+              "bad": 8
+            },
+            "weight": 0.4,
+            "density": true,
+            "points": 25.687,
+            "topContributors": [
+              {
+                "file": "demo/react/useChat.ts",
+                "value": 3
+              },
+              {
+                "file": "demo/vue/useChat.ts",
+                "value": 2
+              },
+              {
+                "file": "src/core/plugin.ts",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "confidence": "medium",
+        "confidenceReason": "2 suppressions in scope"
+      },
+      {
+        "dimension": "documentation",
+        "status": "experimental",
+        "score": 100.0001,
+        "coverage": 0.75,
+        "metrics": [
+          {
+            "metric": "readme-contract.has_readme",
+            "value": 1,
+            "state": "ok",
+            "scale": {
+              "good": 1,
+              "bad": 0
+            },
+            "weight": 0.35,
+            "points": 46.6667
+          },
+          {
+            "metric": "readme-contract.readme_words",
+            "value": 423,
+            "state": "ok",
+            "scale": {
+              "good": 120,
+              "bad": 30
+            },
+            "weight": 0.2,
+            "points": 26.6667
+          },
+          {
+            "metric": "readme-contract.documented_flag_ratio",
+            "value": 0,
+            "state": "skipped",
+            "scale": {
+              "good": 1,
+              "bad": 0.5
+            },
+            "weight": 0.25,
+            "points": 0
+          },
+          {
+            "metric": "comment-quality.marker_per_kloc",
+            "value": 0,
+            "state": "ok",
+            "scale": {
+              "good": 0,
+              "bad": 2
+            },
+            "weight": 0.2,
+            "density": true,
+            "points": 26.6667,
+            "topContributors": []
+          }
+        ],
+        "confidence": "medium",
+        "confidenceReason": "2 suppressions in scope"
+      },
+      {
+        "dimension": "integrity",
+        "status": "experimental",
+        "score": 79.6456,
+        "coverage": 1,
+        "metrics": [
+          {
+            "metric": "suppression-scan.source_per_kloc",
+            "value": 0.9542,
+            "state": "ok",
+            "scale": {
+              "good": 0,
+              "bad": 5
+            },
+            "weight": 0.3,
+            "density": true,
+            "points": 24.2748,
+            "topContributors": [
+              {
+                "file": "demo/vue/App.vue",
+                "value": 1
+              },
+              {
+                "file": "demo/react/App.tsx",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "metric": "suppression-scan.unreasoned_ratio",
+            "value": 0.5,
+            "state": "ok",
+            "scale": {
+              "good": 0,
+              "bad": 1
+            },
+            "weight": 0.2,
+            "points": 10
+          },
+          {
+            "metric": "suppression-scan.test_count",
+            "value": 0,
+            "state": "ok",
+            "scale": {
+              "good": 0,
+              "bad": 200
+            },
+            "weight": 0.1,
+            "points": 10
+          },
+          {
+            "metric": "config-integrity.gap_ratio",
+            "value": 0.1111,
+            "state": "ok",
+            "scale": {
+              "good": 0,
+              "bad": 0.6
+            },
+            "weight": 0.25,
+            "points": 20.3708
+          },
+          {
+            "metric": "ci-integrity.gap_ratio",
+            "value": 0,
+            "state": "ok",
+            "scale": {
+              "good": 0,
+              "bad": 0.6
+            },
+            "weight": 0.15,
+            "points": 15
+          }
+        ],
+        "confidence": "high",
+        "confidenceReason": "no suppression signal wired"
+      },
+      {
+        "dimension": "readability",
+        "status": "experimental",
+        "score": 86.3931,
+        "coverage": 1,
+        "metrics": [
+          {
+            "metric": "file-shape.sloc_p95",
+            "value": 307,
+            "state": "ok",
+            "scale": {
+              "good": 150,
+              "bad": 800
+            },
+            "weight": 0.3,
+            "points": 22.7538,
+            "topContributors": [
+              {
+                "file": "src/core/plugin.ts",
+                "value": 307
+              },
+              {
+                "file": "demo/react/App.tsx",
+                "value": 266
+              },
+              {
+                "file": "demo/vue/App.vue",
+                "value": 246
+              },
+              {
+                "file": "demo/react/useChat.ts",
+                "value": 212
+              },
+              {
+                "file": "src/vue/View.vue",
+                "value": 189
+              }
+            ]
+          },
+          {
+            "metric": "file-shape.max_file_sloc",
+            "value": 307,
+            "state": "ok",
+            "scale": {
+              "good": 300,
+              "bad": 2000
+            },
+            "weight": 0.2,
+            "points": 19.9176
+          },
+          {
+            "metric": "file-shape.god_file_count",
+            "value": 0,
+            "state": "ok",
+            "scale": {
+              "good": 0,
+              "bad": 20
+            },
+            "weight": 0.15,
+            "points": 15
+          },
+          {
+            "metric": "jscpd.duplicated_lines_pct",
+            "value": 1.35,
+            "state": "ok",
+            "scale": {
+              "good": 0,
+              "bad": 10
+            },
+            "weight": 0.2,
+            "points": 17.3,
+            "topContributors": [
+              {
+                "file": "demo/react/useChat.ts",
+                "value": 28
+              },
+              {
+                "file": "src/vue/Preview.vue",
+                "value": 6
+              },
+              {
+                "file": "src/core/plugin.ts",
+                "value": 6
+              }
+            ]
+          },
+          {
+            "metric": "oxlint.violations_per_kloc",
+            "value": 2.8626,
+            "state": "ok",
+            "scale": {
+              "good": 0,
+              "bad": 12
+            },
+            "weight": 0.15,
+            "density": true,
+            "points": 11.4217,
+            "topContributors": [
+              {
+                "file": "demo/react/useChat.ts",
+                "value": 3
+              },
+              {
+                "file": "demo/vue/useChat.ts",
+                "value": 2
+              },
+              {
+                "file": "src/core/plugin.ts",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "confidence": "medium",
+        "confidenceReason": "2 suppressions in scope"
+      },
+      {
+        "dimension": "security",
+        "status": "experimental",
+        "score": 93,
+        "coverage": 1,
+        "metrics": [
+          {
+            "metric": "audit.critical",
+            "value": 0,
+            "state": "ok",
+            "scale": {
+              "good": 0,
+              "bad": 1
+            },
+            "weight": 0.4,
+            "points": 40
+          },
+          {
+            "metric": "audit.high",
+            "value": 1,
+            "state": "ok",
+            "scale": {
+              "good": 0,
+              "bad": 5
+            },
+            "weight": 0.35,
+            "points": 28
+          },
+          {
+            "metric": "audit.moderate",
+            "value": 0,
+            "state": "ok",
+            "scale": {
+              "good": 0,
+              "bad": 20
+            },
+            "weight": 0.25,
+            "points": 25
+          }
+        ],
+        "confidence": "high",
+        "confidenceReason": "no suppression signal wired"
+      },
+      {
+        "dimension": "test-coverage",
+        "status": "experimental",
+        "score": 0,
+        "coverage": 1,
+        "metrics": [
+          {
+            "metric": "test-presence.test_to_source_ratio",
+            "value": 0.0153,
+            "state": "ok",
+            "scale": {
+              "good": 0.5,
+              "bad": 0.05
+            },
+            "weight": 0.3,
+            "points": 0
+          },
+          {
+            "metric": "coverage.line_pct",
+            "value": 31.79,
+            "state": "ok",
+            "scale": {
+              "good": 90,
+              "bad": 40
+            },
+            "weight": 0.3,
+            "points": 0
+          },
+          {
+            "metric": "coverage.branch_pct",
+            "value": 18.75,
+            "state": "ok",
+            "scale": {
+              "good": 85,
+              "bad": 30
+            },
+            "weight": 0.25,
+            "points": 0
+          },
+          {
+            "metric": "coverage.function_pct",
+            "value": 14.29,
+            "state": "ok",
+            "scale": {
+              "good": 90,
+              "bad": 40
+            },
+            "weight": 0.15,
+            "points": 0
+          }
+        ],
+        "confidence": "medium",
+        "confidenceReason": "2 suppressions in scope"
+      },
+      {
+        "dimension": "type-safety",
+        "status": "experimental",
+        "score": 100,
+        "coverage": 1,
+        "metrics": [
+          {
+            "metric": "source-mix.untyped_sloc_ratio",
+            "value": 0,
+            "state": "ok",
+            "scale": {
+              "good": 0,
+              "bad": 0.5
+            },
+            "weight": 0.3,
+            "points": 30
+          },
+          {
+            "metric": "source-mix.untyped_file_ratio",
+            "value": 0,
+            "state": "ok",
+            "scale": {
+              "good": 0,
+              "bad": 0.5
+            },
+            "weight": 0.2,
+            "points": 20,
+            "topContributors": []
+          },
+          {
+            "metric": "tsc.type_errors_per_kloc",
+            "value": 0,
+            "state": "ok",
+            "scale": {
+              "good": 0,
+              "bad": 2
+            },
+            "weight": 0.5,
+            "density": true,
+            "points": 50
+          }
+        ],
+        "confidence": "medium",
+        "confidenceReason": "2 suppressions in scope"
+      },
+      {
+        "dimension": "ui-consistency",
+        "status": "experimental",
+        "score": 87.2774,
+        "coverage": 1,
+        "metrics": [
+          {
+            "metric": "ui-token.color_cardinality",
+            "value": 1,
+            "state": "ok",
+            "scale": {
+              "good": 20,
+              "bad": 120
+            },
+            "weight": 0.3,
+            "points": 30,
+            "topContributors": [
+              {
+                "file": "src/vue/View.vue",
+                "value": 1
+              },
+              {
+                "file": "demo/vue/App.vue",
+                "value": 0
+              },
+              {
+                "file": "demo/react/App.tsx",
+                "value": 0
+              },
+              {
+                "file": "demo/react/main.tsx",
+                "value": 0
+              },
+              {
+                "file": "src/vue/Preview.vue",
+                "value": 0
+              }
+            ]
+          },
+          {
+            "metric": "ui-token.spacing_cardinality",
+            "value": 2,
+            "state": "ok",
+            "scale": {
+              "good": 10,
+              "bad": 60
+            },
+            "weight": 0.3,
+            "points": 30,
+            "topContributors": [
+              {
+                "file": "demo/vue/App.vue",
+                "value": 2
+              },
+              {
+                "file": "demo/react/App.tsx",
+                "value": 2
+              },
+              {
+                "file": "demo/react/main.tsx",
+                "value": 0
+              },
+              {
+                "file": "src/vue/Preview.vue",
+                "value": 0
+              },
+              {
+                "file": "src/vue/View.vue",
+                "value": 0
+              }
+            ]
+          },
+          {
+            "metric": "ui-token.inline_style_per_kloc",
+            "value": 6.3613,
+            "state": "ok",
+            "scale": {
+              "good": 0,
+              "bad": 10
+            },
+            "weight": 0.2,
+            "density": true,
+            "points": 7.2774
+          },
+          {
+            "metric": "ui-token.style_block_ratio",
+            "value": 0,
+            "state": "ok",
+            "scale": {
+              "good": 0,
+              "bad": 0.6
+            },
+            "weight": 0.2,
+            "points": 20
+          }
+        ],
+        "confidence": "medium",
+        "confidenceReason": "2 suppressions in scope"
+      }
+    ],
+    "metrics": {
+      "suppression-scan.source_count": 2,
+      "suppression-scan.test_count": 0,
+      "suppression-scan.source_per_kloc": 0.9542,
+      "suppression-scan.unreasoned_source_count": 1,
+      "suppression-scan.unreasoned_ratio": 0.5,
+      "file-shape.sloc_p95": 307,
+      "file-shape.max_file_sloc": 307,
+      "file-shape.god_file_count": 0,
+      "file-shape.source_file_count": 18,
+      "file-shape.source_sloc": 2096,
+      "source-mix.untyped_file_ratio": 0,
+      "source-mix.untyped_sloc_ratio": 0,
+      "source-mix.untyped_file_count": 0,
+      "source-mix.typed_file_count": 18,
+      "config-integrity.gap_ratio": 0.1111,
+      "config-integrity.gap_count": 1,
+      "ci-integrity.gap_ratio": 0,
+      "ci-integrity.gap_count": 0,
+      "ci-integrity.workflow_count": 2,
+      "oxlint.violations_per_kloc": 2.8626,
+      "oxlint.violations": 6,
+      "oxlint.errors_per_kloc": 0,
+      "jscpd.duplicated_lines_pct": 1.35,
+      "jscpd.clone_count": 4,
+      "tsc.type_errors": 0,
+      "tsc.type_errors_per_kloc": 0,
+      "knip.unused_files": 3,
+      "knip.unused_file_ratio": 0.125,
+      "knip.unused_export_ratio": 0.0417,
+      "knip.unused_exports": 1,
+      "knip.unused_dependencies": 0,
+      "audit.critical": 0,
+      "audit.high": 1,
+      "audit.moderate": 0,
+      "audit.low": 0,
+      "test-presence.test_to_source_ratio": 0.0153,
+      "test-presence.test_sloc": 32,
+      "test-presence.test_file_count": 1,
+      "coverage.line_pct": 31.79,
+      "coverage.branch_pct": 18.75,
+      "coverage.function_pct": 14.29,
+      "circular.cycle_count": 0,
+      "readme-contract.has_readme": 1,
+      "readme-contract.readme_words": 423,
+      "comment-quality.marker_per_kloc": 0,
+      "comment-quality.marker_count": 0,
+      "comment-quality.comment_density": 0.1432,
+      "ui-token.color_cardinality": 1,
+      "ui-token.spacing_cardinality": 2,
+      "ui-token.inline_style_per_kloc": 6.3613,
+      "ui-token.style_block_ratio": 0,
+      "ui-token.ui_file_count": 5
+    },
+    "findings": [
+      {
+        "rule": "as-any-no-reason",
+        "severity": "error",
+        "file": "demo/react/App.tsx",
+        "line": 7,
+        "message": "bypasses the type checker, with no reason given",
+        "probe": "suppression-scan",
+        "dimension": "integrity",
+        "tier": 0
+      },
+      {
+        "rule": "formatter-missing",
+        "severity": "warning",
+        "file": "package.json",
+        "line": 1,
+        "message": "No formatter is installed",
+        "probe": "config-integrity",
+        "dimension": "integrity",
+        "tier": 0
+      },
+      {
+        "rule": "oxlint/no-await-in-loop",
+        "severity": "warning",
+        "file": "demo/vue/useChat.ts",
+        "line": 1,
+        "message": "Unexpected `await` inside a loop.",
+        "probe": "oxlint",
+        "dimension": "correctness",
+        "tier": 0
+      },
+      {
+        "rule": "oxlint/no-await-in-loop",
+        "severity": "warning",
+        "file": "demo/vue/useChat.ts",
+        "line": 1,
+        "message": "Unexpected `await` inside a loop.",
+        "probe": "oxlint",
+        "dimension": "correctness",
+        "tier": 0
+      },
+      {
+        "rule": "oxlint/no-accumulating-spread",
+        "severity": "warning",
+        "file": "demo/react/useChat.ts",
+        "line": 1,
+        "message": "Do not spread accumulators in loops",
+        "probe": "oxlint",
+        "dimension": "correctness",
+        "tier": 0
+      },
+      {
+        "rule": "oxlint/no-await-in-loop",
+        "severity": "warning",
+        "file": "demo/react/useChat.ts",
+        "line": 1,
+        "message": "Unexpected `await` inside a loop.",
+        "probe": "oxlint",
+        "dimension": "correctness",
+        "tier": 0
+      },
+      {
+        "rule": "oxlint/no-await-in-loop",
+        "severity": "warning",
+        "file": "demo/react/useChat.ts",
+        "line": 1,
+        "message": "Unexpected `await` inside a loop.",
+        "probe": "oxlint",
+        "dimension": "correctness",
+        "tier": 0
+      },
+      {
+        "rule": "oxlint/consistent-function-scoping",
+        "severity": "warning",
+        "file": "src/core/plugin.ts",
+        "line": 1,
+        "message": "Function `positionDesc` does not capture any variables from its parent scope",
+        "probe": "oxlint",
+        "dimension": "correctness",
+        "tier": 0
+      },
+      {
+        "rule": "duplicated-block",
+        "severity": "warning",
+        "file": "src/vue/Preview.vue",
+        "line": 81,
+        "message": "6 duplicated lines",
+        "probe": "jscpd",
+        "dimension": "readability",
+        "tier": 0
+      },
+      {
+        "rule": "duplicated-block",
+        "severity": "warning",
+        "file": "src/core/plugin.ts",
+        "line": 146,
+        "message": "6 duplicated lines",
+        "probe": "jscpd",
+        "dimension": "readability",
+        "tier": 0
+      },
+      {
+        "rule": "duplicated-block",
+        "severity": "warning",
+        "file": "demo/react/useChat.ts",
+        "line": 69,
+        "message": "14 duplicated lines",
+        "probe": "jscpd",
+        "dimension": "readability",
+        "tier": 0
+      },
+      {
+        "rule": "duplicated-block",
+        "severity": "warning",
+        "file": "demo/react/useChat.ts",
+        "line": 132,
+        "message": "14 duplicated lines",
+        "probe": "jscpd",
+        "dimension": "readability",
+        "tier": 0
+      },
+      {
+        "rule": "unused-file",
+        "severity": "warning",
+        "file": "demo/react/App.tsx",
+        "line": 1,
+        "message": "nothing imports this file",
+        "probe": "knip",
+        "dimension": "architecture",
+        "tier": 1
+      },
+      {
+        "rule": "unused-file",
+        "severity": "warning",
+        "file": "demo/react/main.tsx",
+        "line": 1,
+        "message": "nothing imports this file",
+        "probe": "knip",
+        "dimension": "architecture",
+        "tier": 1
+      },
+      {
+        "rule": "unused-file",
+        "severity": "warning",
+        "file": "demo/react/useChat.ts",
+        "line": 1,
+        "message": "nothing imports this file",
+        "probe": "knip",
+        "dimension": "architecture",
+        "tier": 1
+      },
+      {
+        "rule": "unused-export",
+        "severity": "warning",
+        "file": "demo/shared/chat-utils.ts",
+        "line": 1,
+        "message": "`DEFAULT_MOCK_RESPONSES` is exported but never imported",
+        "probe": "knip",
+        "dimension": "architecture",
+        "tier": 1
+      }
+    ],
+    "probes": [
+      {
+        "probe": "suppression-scan",
+        "status": {
+          "kind": "ok"
+        },
+        "tools": []
+      },
+      {
+        "probe": "file-shape",
+        "status": {
+          "kind": "ok"
+        },
+        "tools": []
+      },
+      {
+        "probe": "source-mix",
+        "status": {
+          "kind": "ok"
+        },
+        "tools": []
+      },
+      {
+        "probe": "config-integrity",
+        "status": {
+          "kind": "ok"
+        },
+        "tools": []
+      },
+      {
+        "probe": "ci-integrity",
+        "status": {
+          "kind": "ok"
+        },
+        "tools": []
+      },
+      {
+        "probe": "oxlint",
+        "status": {
+          "kind": "ok"
+        },
+        "tools": [
+          "oxlint"
+        ]
+      },
+      {
+        "probe": "jscpd",
+        "status": {
+          "kind": "ok"
+        },
+        "tools": [
+          "jscpd"
+        ]
+      },
+      {
+        "probe": "tsc",
+        "status": {
+          "kind": "ok"
+        },
+        "tools": [
+          "vue-tsc"
+        ]
+      },
+      {
+        "probe": "knip",
+        "status": {
+          "kind": "ok"
+        },
+        "tools": [
+          "knip"
+        ]
+      },
+      {
+        "probe": "audit",
+        "status": {
+          "kind": "ok"
+        },
+        "tools": [
+          "yarn"
+        ]
+      },
+      {
+        "probe": "test-presence",
+        "status": {
+          "kind": "ok"
+        },
+        "tools": []
+      },
+      {
+        "probe": "coverage",
+        "status": {
+          "kind": "ok"
+        },
+        "tools": []
+      },
+      {
+        "probe": "circular",
+        "status": {
+          "kind": "ok"
+        },
+        "tools": [
+          "madge"
+        ]
+      },
+      {
+        "probe": "readme-contract",
+        "status": {
+          "kind": "ok"
+        },
+        "tools": []
+      },
+      {
+        "probe": "comment-quality",
+        "status": {
+          "kind": "ok"
+        },
+        "tools": []
+      },
+      {
+        "probe": "ui-token",
+        "status": {
+          "kind": "ok"
+        },
+        "tools": []
+      }
+    ],
+    "toolVersions": {
+      "oxlint": "Version: 1.88.0",
+      "jscpd": "4.3.0",
+      "vue-tsc": "6.0.3",
+      "knip": "6.41.0",
+      "yarn": "1.22.22",
+      "madge": "8.0.0"
+    },
+    "overall": {
+      "score": 79.4813,
+      "scoredDimensions": 9,
+      "comparable": false
+    }
+  },
+  "createdAt": "2026-10-18T04:00:27.592Z"
+}
